@@ -41,7 +41,7 @@ function FriendsModal({ onClose }) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId: user._id, friendId })
             });
-            const updatedFriends = await res.json();
+            await res.json();
 
             // Refresh local list
             const resFriends = await fetch(`${import.meta.env.VITE_API_URL}/api/friends/${user._id}`);

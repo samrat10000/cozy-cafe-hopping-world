@@ -10,7 +10,6 @@ import { useAuth } from '../../context/AuthContext';
 import FriendsModal from '../friends/FriendsModal';
 
 // Fix for default marker icon issues in React-Leaflet
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
 const myIcon = new Icon({
     iconUrl: catBread,

@@ -13,7 +13,7 @@
     box-shadow: 8px 8px 0px var(--cozy-brown);
     /* Pixel shadow */
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
     border: 4px solid var(--cozy-brown);
 }
@@ -21,7 +21,7 @@
 .title {
     font-family: 'Press Start 2P', cursive;
     color: var(--cozy-brown);
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -74,6 +74,7 @@
     margin-top: 1rem;
     transition: all 0.1s;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .button:active {

@@ -12,7 +12,6 @@ const getVibeColor = (type) => {
 
 function Cafe({ cafe, onBack }) {
     const { user } = useAuth();
-    const [collected, setCollected] = useState(false);
     const [activeTab, setActiveTab] = useState('menu'); // 'menu', 'reviews', 'write'
     const [reviews, setReviews] = useState([]);
     const [newReviewText, setNewReviewText] = useState("");
@@ -37,10 +36,6 @@ function Cafe({ cafe, onBack }) {
             .catch(err => console.error(err));
     }, [cafe.id]);
 
-    const handleCollect = () => {
-        setCollected(true);
-        // In real app, save to backend: /api/users/collect
-    };
 
     const handlePostReview = async (e) => {
         e.preventDefault();
@@ -159,14 +154,6 @@ function Cafe({ cafe, onBack }) {
                     )}
                 </div>
 
-                {/* <button
-                    className={`${styles.stickerButton} ${collected ? styles.collected : ''}`}
-                    onClick={handleCollect}
-                    disabled={collected}
-                    style={{ marginTop: '20px' }}
-                >
-                    {collected ? "Sticker Collected! ✨" : "Collect Sticker 🎫"}
-                </button> */}
             </main>
         </div>
     );

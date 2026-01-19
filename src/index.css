@@ -21,6 +21,10 @@
 }
 
 /* 3. Apply the base feeling */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: var(--cozy-cream);

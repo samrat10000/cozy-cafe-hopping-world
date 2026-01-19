@@ -26,7 +26,7 @@ function Login({ onBack, onLoginSuccess }) {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h1 className={styles.title}>Cozy Login</h1>
+                <h1 className={styles.title}>Cozy Cafe Login</h1>
                 <p className={styles.subtitle}>Welcome back, traveler.</p>
 
                 {error && <div className={styles.error}>{error}</div>}
