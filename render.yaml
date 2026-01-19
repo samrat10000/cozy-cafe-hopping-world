@@ -16,7 +16,7 @@ services:
         sync: false # Set this in the Render Dashboard for security
 
   # Frontend (Static Site)
-  - type: web
+  - type: static
     name: cozy-cafe-frontend
     env: static
     plan: free
