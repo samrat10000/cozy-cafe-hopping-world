@@ -52,5 +52,41 @@ export const cafes = [
     vibe: "Alternative",
     description: "Low seating, floor cushions, and ambient music. The perfect place to disconnect from the chaos.",
     menu: ["Falafel Platter", "Mint Lemonade", "Brownie with Ice Cream"]
+  },
+  {
+    id: 7,
+    name: "Pure Soul Cafe",
+    coordinates: [30.1285, 78.3240],
+    type: "Organic & Kitchen",
+    vibe: "Peaceful & Healthy",
+    description: "Nestled in a quiet corner, focuses on organic ingredients and high-quality preparations. Great for deep work.",
+    menu: ["Smoothie Bowl", "Organic Salad", "Matcha Latte"]
+  },
+  {
+    id: 8,
+    name: "Nirvana Cafe",
+    coordinates: [30.1260, 78.3255],
+    type: "Wellness Hub",
+    vibe: "Zen & Spiritual",
+    description: "Often hosts live music and spiritual gatherings. The food is light and nourishing.",
+    menu: ["Hummus Plate", "Herbal Tea", "Veggie Wrap"]
+  },
+  {
+    id: 9,
+    name: "Secret Garden Cafe",
+    coordinates: [30.1215, 78.3280],
+    type: "Hidden Spot",
+    vibe: "Quiet & Lush",
+    description: "A little hard to find, but worth the search. Surrounded by greenery with small private seating spots.",
+    menu: ["Iced Hibiscus Tea", "Mini Sandwich", "Lemon Tart"]
+  },
+  {
+    id: 10,
+    name: "Shambala Cafe",
+    coordinates: [30.1275, 78.3260],
+    type: "Global Fusion",
+    vibe: "Lively & Mix",
+    description: "A vibrant spot with travelers from all over the world. The menu is as diverse as the crowd.",
+    menu: ["Veggie Burger", "Falafel Wrapp", "Chef's Special Pizza"]
   }
 ];
