@@ -14,10 +14,3 @@ services:
         value: 10000
       - key: MONGO_URI
         sync: false
-
-  # Frontend Service (Static Site)
-  - type: static
-    name: cozy-cafe-frontend
-    plan: free
-    buildCommand: npm install && npm run build
-    publishDir: dist
