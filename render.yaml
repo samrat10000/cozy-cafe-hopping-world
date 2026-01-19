@@ -13,11 +13,11 @@ services:
       - key: PORT
         value: 10000
       - key: MONGO_URI
-        sync: false # Set this in the Render Dashboard for security
+        sync: false
 
-staticSites:
-  # Frontend (Static Site)
-  - name: cozy-cafe-frontend
+  # Frontend Service (Static Site)
+  - type: static
+    name: cozy-cafe-frontend
     plan: free
-    publishDir: dist
     buildCommand: npm install && npm run build
+    publishDir: dist
