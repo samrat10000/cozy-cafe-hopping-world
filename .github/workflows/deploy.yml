@@ -1,0 +1,54 @@
+name: Build & Deploy Blueprint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  frontend-build:
+    name: Build Frontend (Static)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build site
+        run: npm run build
+      # Instruction for GitHub Pages: 
+      # You can use actions/upload-pages-artifact and actions/deploy-pages 
+      # to host the 'dist' folder for free on GitHub!
+
+  backend-check:
+    name: Verify Backend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+      - name: Install server dependencies
+        run: |
+          cd server
+          npm install
+      - name: Lint/Test Backend
+        run: |
+          cd server
+          # npm test (Uncomment when you have tests!)
+          echo "Backend verification complete."
+
+# 📍 BLUEPRINT FOR FREE HOSTING:
+# 1. Frontend: Connect this repo to Vercel or Netlify (Choose "Vite" preset).
+# 2. Backend: Connect this repo to Render.com (Choose "Web Service").
+#    - Root Directory: server
+#    - Build Command: npm install
+#    - Start Command: node server.js
