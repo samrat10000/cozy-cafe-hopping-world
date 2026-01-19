@@ -10,14 +10,25 @@
 
 /* 2. Define our Cozy Variables */
 :root {
-  /* The Background: specific Cream, not white */
+  /* Original colors */
   --cozy-cream: #FDFBF7;
-
-  /* The Text: Soft Brown, not black */
   --cozy-brown: #4A4036;
-
-  /* Use this for accents/buttons later */
   --latte-soft: #E6DCCF;
+
+  /* Light theme (default) */
+  --bg-color: var(--cozy-cream);
+  --text-color: var(--cozy-brown);
+  --accent-color: var(--latte-soft);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #2C241B;
+  /* Dark Roast */
+  --text-color: #E6DCCF;
+  /* Creamy Text */
+  --accent-color: #4A4036;
+  /* Espresso */
 }
 
 /* 3. Apply the base feeling */
@@ -25,11 +36,16 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  background-color: var(--cozy-cream);
-  color: var(--cozy-brown);
+  padding: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Nunito', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
 
   /* Make text look smooth */
   -webkit-font-smoothing: antialiased;

@@ -7,16 +7,20 @@ function About({ onBack }) {
             <div className={styles.content}>
                 <h1 className={styles.title}>About This World</h1>
                 <p className={styles.text}>
-                    This is a personal cafe-hopping world I made to feel alive while coding.
+                    I was just getting bored and I thought this might be a cool idea.
                 </p>
                 <p className={styles.text}>
-                    It is not a product. It is a place.
+                    So I just built this to feel alive and
                     <br />
-                    A place for quiet thoughts, warm coffee, and gentle friends.
+                    built with lots of caffeine for sure.
                 </p>
 
+
+
                 <div className={styles.signature}>
-                    — Built with &lt;3
+                    "The site's always under construction, so don't mind the bugs.
+                    <br />
+                    I need my health bar refilled too. I'll fix them later... maybe."
                 </div>
 
                 <button className={styles.backButton} onClick={onBack}>

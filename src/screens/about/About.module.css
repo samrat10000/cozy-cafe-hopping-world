@@ -13,62 +13,63 @@
 }
 
 .content {
-    background: #FFFAF0;
-    padding: 3rem;
-    max-width: 500px;
-    border-radius: 4px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    padding: 2rem;
+    max-width: 600px;
     text-align: center;
-    border: 1px solid #E6DCCF;
-    position: relative;
+    border: none;
+    box-shadow: none;
 }
 
 .content::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 2px dashed #D7CCC8;
-    pointer-events: none;
+    display: none;
 }
 
 .title {
     font-family: 'Press Start 2P', cursive;
-    color: var(--cozy-brown);
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
+    color: var(--latte-soft);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0px #000;
+
 }
 
 .text {
     font-family: 'Nunito', sans-serif;
-    color: var(--cozy-brown);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    color: var(--cozy-cream);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 .signature {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-style: italic;
-    opacity: 0.7;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-family: 'VT3886', monospace;
+    opacity: 0.5;
+    color: var(--latte-soft);
+    font-size: 0.9rem;
 }
 
 .backButton {
     background: none;
-    border: 2px solid var(--cozy-brown);
+    border: none;
     padding: 0.8rem 2rem;
     font-family: 'Press Start 2P', cursive;
-    color: var(--cozy-brown);
+    color: var(--latte-soft);
     cursor: pointer;
     transition: all 0.2s;
+    opacity: 0.7;
+    font-size: 0.8rem;
 }
 
+
 .backButton:hover {
-    background: var(--cozy-brown);
-    color: #FFFAF0;
+    background: none;
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 @keyframes fadeIn {
