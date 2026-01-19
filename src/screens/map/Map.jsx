@@ -30,13 +30,13 @@ function Map({ onCafeSelect, onProfile }) {
     useEffect(() => {
         if (user) {
             // Fetch friend visits
-            fetch(`http://localhost:5000/api/visits/friends/${user._id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/api/visits/friends/${user._id}`)
                 .then(res => res.json())
                 .then(data => setFriendActivity(data))
                 .catch(err => console.error("Error fetching friend visits:", err));
 
             // Fetch my own visits (to mark as visited)
-            fetch(`http://localhost:5000/api/visits/${user._id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/api/visits/${user._id}`)
                 .then(res => res.json())
                 .then(data => setMyVisits(data))
                 .catch(err => console.error("Error fetching my visits:", err));

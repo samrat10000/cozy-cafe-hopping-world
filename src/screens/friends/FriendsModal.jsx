@@ -12,7 +12,7 @@ function FriendsModal({ onClose }) {
     // Fetch Friends on Load
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/api/friends/${user._id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/api/friends/${user._id}`)
                 .then(res => res.json())
                 .then(data => setFriends(data))
                 .catch(err => console.error("Failed to load friends", err));
@@ -23,7 +23,7 @@ function FriendsModal({ onClose }) {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:5000/api/friends/search?name=${searchQuery}`);
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/friends/search?name=${searchQuery}`);
             const data = await res.json();
             // Filter out self and existing friends
             const filtered = data.filter(u => u._id !== user._id && !friends.some(f => f._id === u._id));
@@ -36,7 +36,7 @@ function FriendsModal({ onClose }) {
     // Add a friend
     const handleAddFriend = async (friendId) => {
         try {
-            const res = await fetch('http://localhost:5000/api/friends/add', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/friends/add`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId: user._id, friendId })
@@ -44,7 +44,7 @@ function FriendsModal({ onClose }) {
             const updatedFriends = await res.json();
 
             // Refresh local list
-            const resFriends = await fetch(`http://localhost:5000/api/friends/${user._id}`);
+            const resFriends = await fetch(`${import.meta.env.VITE_API_URL}/api/friends/${user._id}`);
             const data = await resFriends.json();
             setFriends(data);
 

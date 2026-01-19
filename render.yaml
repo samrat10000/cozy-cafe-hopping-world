@@ -14,3 +14,14 @@ services:
         value: 10000
       - key: MONGO_URI
         sync: false
+
+  # Frontend Service (Static Site)
+  - type: static
+    name: cozy-cafe-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    publishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://cozy-cafe-backend.onrender.com
