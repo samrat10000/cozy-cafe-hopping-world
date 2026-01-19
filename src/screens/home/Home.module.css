@@ -1,0 +1,75 @@
+/* src/screens/home/Home.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(180deg, #FDF6E3 0%, #E6DCCF 100%);
+}
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    /* PIXEL FONT! */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--cozy-brown);
+    text-shadow: 3px 3px 0px #E6DCCF;
+    /* Retro shadow */
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    max-width: 400px;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* A cute pixel coffee cup decoration */
+.decoration {
+    width: 100px;
+    height: auto;
+    margin-bottom: 2rem;
+    animation: float 3s ease-in-out infinite;
+    image-rendering: pixelated;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.button {
+    font-family: 'Press Start 2P', cursive;
+    /* Pixel button too! */
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    background-color: var(--cozy-brown);
+    color: var(--cozy-cream);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    box-shadow: 4px 4px 0px #2A241E;
+    /* Chunky pixel shadow */
+}
+
+.button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2A241E;
+}
+
+.button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #2A241E;
+}

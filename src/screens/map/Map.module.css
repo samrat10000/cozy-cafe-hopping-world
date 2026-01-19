@@ -1,0 +1,131 @@
+/* src/screens/Map/Map.module.css */
+
+/* OUTER CONTAINER - Centers frame on page */
+.mapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fdfbf7 0%, #e6dccf 100%);
+}
+
+/* MAP FRAME - Pixel-art window */
+.mapFrame {
+    position: relative;
+    width: 680px;
+    height: 680px;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    background: #FDF6E3;
+    box-shadow:
+        inset 0 0 0 3px #E6DCCF,
+        12px 12px 0px rgba(74, 64, 54, 0.88);
+    overflow: hidden;
+}
+
+/* MAP LABEL - Game UI text */
+.mapLabel {
+    margin-top: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: var(--cozy-brown);
+    opacity: 0.7;
+    letter-spacing: 2px;
+}
+
+.popup {
+    text-align: center;
+}
+
+.popupHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.popupTitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: var(--cozy-brown);
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.sparkle {
+    font-size: 1.2rem;
+    animation: sparkle 1s infinite alternate;
+}
+
+@keyframes sparkle {
+    from {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.enterButton {
+    background: var(--cozy-brown);
+    color: var(--cozy-cream);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-top: 5px;
+    text-shadow: none;
+}
+
+.enterButton:hover {
+    background: #4A4036;
+}
+
+.friendsButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--cozy-brown);
+    color: var(--cozy-cream);
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.friendsButton:hover {
+    transform: scale(1.05);
+    background: var(--cozy-brown);
+}
+
+.friendPresence {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFF3E0;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    color: var(--cozy-brown);
+    border: none;
+}
+
+.miniAvatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--cozy-brown);
+}

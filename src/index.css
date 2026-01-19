@@ -1,0 +1,32 @@
+/* src/index.css */
+/* src/index.css */
+
+/* 1. Import fonts - adding the pixel font! */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Press+Start+2P&display=swap');
+
+
+/* 1. Import a cute, rounded font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* 2. Define our Cozy Variables */
+:root {
+  /* The Background: specific Cream, not white */
+  --cozy-cream: #FDFBF7;
+
+  /* The Text: Soft Brown, not black */
+  --cozy-brown: #4A4036;
+
+  /* Use this for accents/buttons later */
+  --latte-soft: #E6DCCF;
+}
+
+/* 3. Apply the base feeling */
+body {
+  margin: 0;
+  background-color: var(--cozy-cream);
+  color: var(--cozy-brown);
+  font-family: 'Nunito', sans-serif;
+
+  /* Make text look smooth */
+  -webkit-font-smoothing: antialiased;
+}
