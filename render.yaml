@@ -17,7 +17,6 @@ services:
   # Frontend (Static Site)
 staticSites:
   - name: cozy-cafe-frontend
-    env: static
     plan: free
     publishDir: dist
     buildCommand: npm install && npm run build
